@@ -17,8 +17,8 @@ def detect_outliers_iqr(data: list[float], k: float = 1.5) -> dict:
 	iqr=q3-q1
 	lb=q1-k*iqr
 	ub=q3+k*iqr
-	outliers=[]
 	cleaned=[]
+	outliers=[]
 	for idx,i in enumerate(data):
 		if i<lb or i>ub:
 			outliers.append(idx)
